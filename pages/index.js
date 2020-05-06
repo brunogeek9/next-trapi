@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import fetch from 'isomorphic-unfetch'
+import Card from 'components/Card'
+
 const Home = ({ movies }) => {
 
   console.log(movies)
   return (
     <div className="container">
       {
-        movies.map(movie => (
-          <div>
-            {movie.title}
-          </div>
+        movies.map(movie => ( 
+          <Card key={movie.id} movie={movie} />
         ))
       }
     </div>

@@ -6,10 +6,10 @@ function Card ({ movie }) {
     return (
         <CardStyled>
             <div className="poster">
-                <img src={API_URL + movie.movie_poster.url} alt=""/>
+                <img src={API_URL + movie.poster.url} alt=""/>
             </div>
             <div className="body">
-                <h3>{ movie.movie_title }</h3>
+                <h3>{ movie.title }</h3>
                 <p dangerouslySetInnerHTML={{ __html: movie.description }} />
             </div>
         </CardStyled>
