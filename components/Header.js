@@ -4,7 +4,7 @@ import { Flex, Box } from 'reflexbox'
 import Navigation from 'components/Navigation'
 import Link from 'next/link'
 
-function Header() {
+function Header({ isDark, navigation }) {
     return (
         <HeaderStyled>
             <Box variant="container">
@@ -17,7 +17,8 @@ function Header() {
                             </a>
                         </Link>
                     </div>
-                    <Navigation />
+                    <Navigation navigation={navigation}/>
+                    
                 </Flex>
 
             </Box>
