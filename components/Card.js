@@ -1,15 +1,15 @@
 import styled from '@emotion/styled'
 
-function Card ({ movie }) {
+function Card({ movie }) {
     const { API_URL } = process.env
 
     return (
         <CardStyled>
             <div className="poster">
-                <img width={255} height={350} src={API_URL + movie.poster.url} alt=""/>
+                <img width={255} height={350} src={API_URL + movie.poster.url} alt="" />
             </div>
             <div className="body">
-                <h3>{ movie.title }</h3>
+                <h3>{movie.title}</h3>
                 <p dangerouslySetInnerHTML={{ __html: movie.description }} />
             </div>
         </CardStyled>
@@ -18,7 +18,7 @@ function Card ({ movie }) {
 
 const CardStyled = styled.div`
     width: 90%;
-    height: 90%;
+    height: 88%;
     border: 1px solid #cccccc;
     margin-top: 50px;
     border-radius: 20px;

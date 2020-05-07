@@ -26,16 +26,20 @@ function Header() {
 }
 
 const HeaderStyled = styled.header`
-    background: ${props => props.isDark ? '#000000' : '#efefef'} ; 
-    
+    background: ${props => props.isDark ? '#000000' : '#efefef'};
+    padding: 20px;
+
     .logo {
-        display: flex;
-        align-items: center;
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
 
         .logo-text {
             color: #333333;
             font-weight: bold;
-            font-size: 20px;
+            font-size: ${rem(20)};
             margin-left: 20px;
         }
     }
