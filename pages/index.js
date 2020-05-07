@@ -7,7 +7,7 @@ const Home = ({ movies }) => {
   console.log(movies)
   return (
     <Box variant="container">
-      <Box my={40} as="h2">Latest Movies</Box>
+      <Box my={30} as="h2">Latest Movies</Box>
       <Flex justifyContent="space-between" flexDirection={{ _: "column", md: "row" }}>
         {movies.map(movie => (
           <Box my={10} key={movie.id} width={{ _: "100%", md: "30%" }}>

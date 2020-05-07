@@ -1,14 +1,26 @@
 import styled from '@emotion/styled'
+import { rem } from 'polished'
+import { Flex, Box } from 'reflexbox'
+import Navigation from 'components/Navigation'
+import Link from 'next/link'
 
 function Header() {
     return (
         <HeaderStyled>
-            <div className="container">
-                <div className="logo">
-                    <img src="/images/logo.svg" alt="Sites logo" />
-                    <span className="logo-text">Next Movies</span>
-                </div>
-            </div>
+            <Box variant="container">
+                <Flex justifyContent="space-between" alignItems="center">
+                    <div className="logo">
+                        <Link href="/">
+                            <a>
+                                <img src="/images/logo.svg" alt="Sites logo" />
+                                <span className="logo-text">Next Movies</span>
+                            </a>
+                        </Link>
+                    </div>
+                    <Navigation />
+                </Flex>
+
+            </Box>
         </HeaderStyled>
     )
 }

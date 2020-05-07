@@ -6,7 +6,7 @@ function Card ({ movie }) {
     return (
         <CardStyled>
             <div className="poster">
-                <img width={250} height={350} src={API_URL + movie.poster.url} alt=""/>
+                <img width={255} height={350} src={API_URL + movie.poster.url} alt=""/>
             </div>
             <div className="body">
                 <h3>{ movie.title }</h3>
