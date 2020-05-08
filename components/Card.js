@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
 
 function Card({ movie }) {
     const { API_URL } = process.env
@@ -6,19 +7,24 @@ function Card({ movie }) {
     return (
         <CardStyled>
             <div className="poster">
-                <img width={255} height={350} src={API_URL + movie.poster.url} alt="" />
+                <img width={255} height={360} src={API_URL + movie.poster.url} alt="" />
             </div>
             <div className="body">
+                
                 <h3>{movie.title}</h3>
+
                 <p dangerouslySetInnerHTML={{ __html: movie.description }} />
+                <Link href="/">
+                    <a>More about this movie</a>
+                </Link>
             </div>
         </CardStyled>
     )
 }
 
 const CardStyled = styled.div`
-    width: 90%;
-    height: 88%;
+    width: 100%;
+    /* height: 88%; */
     border: 1px solid #cccccc;
     margin-top: 50px;
     border-radius: 20px;
