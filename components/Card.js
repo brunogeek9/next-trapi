@@ -14,7 +14,7 @@ function Card({ movie }) {
                 <h3>{movie.title}</h3>
 
                 {/* <p dangerouslySetInnerHTML={{ __html: movie.description }} /> */}
-                <Link href="/movies/[id]" as={`movies/${movie.id}`}>
+                <Link href="/movies/[slug]" as={`movies/${movie.slug}`}>
                     <a>More about this movie</a>
                 </Link>
             </div>
