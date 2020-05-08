@@ -4,7 +4,7 @@ import { Flex, Box } from 'reflexbox'
 
 const Home = ({ movies }) => {
 
-  console.log(movies)
+  // console.log(movies)
   return (
     <Box variant="container">
       <Box my={40} as="h2">Latest Movies</Box>
